@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大事件-登录-注册页面</title>
+    <!-- 引入layui 的css 样式文件 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入自己的 css 样式文件 -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+
+<body>
+    <!-- 头部logo 区域 -->
+    <div class="layui-main">
+        <img src="/assets/images/logo.png" alt="">
+    </div>
+    <!-- 登录注册区域 -->
+    <div class="loginAndRegBox">
+        <!-- 标题区域 -->
+        <div class="title_box">
+            <img src="/assets/images/login_title.png" alt="">
+        </div>
+        <!-- 登录区域  -->
+        <div class="login_box">
+            <form class="layui-form" id="form-login">
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 注意：这里的提交按钮和普通按钮 区别就在 有个lay-submit属性 -->
+                <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>立即提交</button>
+                <div class="links">
+                    <a href="javascript:;" id="link_reg">去注册账号</a>
+                </div>
+            </form>
+        </div>
+        <!-- 注册区域 -->
+        <div class="reg_box">
+            <form class="layui-form" id="form-reg">
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd|repwd" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="repassword" required lay-verify="required|pwd" placeholder="再次确认密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 注意：这里的提交按钮和普通按钮 区别就在 有个lay-submit属性 -->
+                <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>立即提交</button>
+                <div class="links">
+                    <a href="javascript:;" id="link_login">去登录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 引入 layui 的js文件 -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 引入 jQuery js 文件 -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 引入自己封装的baseAPI js文件 -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 引入自己的 login.js 文件 -->
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>
