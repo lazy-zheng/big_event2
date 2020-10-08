@@ -67,6 +67,7 @@ $(function () {
             url: '/api/login',
             data: $(this).serialize(),
             success: function (res) {
+                console.log(res);
                 // 判断服务器返回 过来的数据
                 if (res.status !== 0) return layer.msg(res.message);
                 // 否则提示用户登录成功
